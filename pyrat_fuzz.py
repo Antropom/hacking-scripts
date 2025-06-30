@@ -26,9 +26,9 @@ def check_url(path):
         response = requests.get(url, timeout=TIMEOUT)
         response_text = response.text
         if response_text != 'Try a more basic connection' :
-            print(f"[✅ FOUND] {url} => {path}")
+            print(f"[FOUND] {url} => {path}")
     except requests.RequestException as e:
-        print(f"[💥 ERROR] {url} => {e}")
+        print(f"[ERROR] {url} => {e}")
 
 
 def generate_paths():
